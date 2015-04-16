@@ -46,8 +46,8 @@ TWcalc<-function(eigs, n.inds, k){
 		dif<-abs(test[,1]-TW)
 		p<-test[dif==min(dif),2]
 		pres<-c(pres,p)
-		}
 	}
+	
 	res<-list(TWstats=TWres_, Sig=pres, pval=pvals)
 	return(res)
 }
