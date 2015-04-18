@@ -1,5 +1,6 @@
+require(RMTstat)
 
-#eigs = eigenvalues;   n.ind = number of individuals; k = number of axes to test
+#eigs = eigenvalues; k = number of axes to test
 TWcalc<-function(eigs, k){
 	#make sure eigenvalues are sorted
 	eigs = sort(eigs, decr=T)

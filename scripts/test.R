@@ -1,5 +1,5 @@
 rm(list=ls())
-library(testthat)
+require(testthat)
 source("tw.r")
 load("../test/TWvals.RData")
 load("../test//Pvals.table.Rdata")
