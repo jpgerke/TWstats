@@ -1,5 +1,8 @@
 require(RMTstat)
 
+
+##function to calculate Tracy-Widom statistics on genetic data
+#input is a vector of eigenvalues and a number of eigenvalues to test.
 #eigs = eigenvalues; k = number of axes to test
 TWcalc<-function(eigs, k){
 	#make sure eigenvalues are sorted
