@@ -1,8 +1,9 @@
 rm(list=ls())
 require(testthat)
 source("tw.r")
-load("../test/TWvals.RData")
-load("../test//Pvals.table.Rdata")
+load("../test/TWvals.RDs")
+load("../test/Pvals.table.Rds")
+load("../test/Pvals.dist.Rds")
 
 eigs = scan("../test/eigs.txt", what=numeric())
 
