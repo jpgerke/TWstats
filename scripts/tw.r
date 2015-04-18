@@ -1,11 +1,11 @@
 
 #eigs = eigenvalues;   n.ind = number of individuals; k = number of axes to test
-TWcalc<-function(eigs, n.inds, k){
+TWcalc<-function(eigs, k){
 	#make sure eigenvalues are sorted
 	eigs = sort(eigs, decr=T)
 	#load a table for test statistics
-	test<-read.table("twtable.txt", header=FALSE)
-	m0=n.inds
+	test<-read.table("../twtable.txt", header=FALSE)
+	m0=length(eigs)
 	k=k
 	# calculate the statistic for dimensions m0
 	# equations are from Patterson et al. 2006
@@ -33,7 +33,7 @@ TWcalc<-function(eigs, n.inds, k){
 	if (require(RMTstat)){
 		pvals = c()
 		for (i in 1:length(TWres_)){
-			p = ptw(TWres[i], lower.tail=F)
+			p = ptw(TWres_[i], lower.tail=F)
 			pvals = c(pvals, p)
 		}
 	}
